@@ -9,17 +9,17 @@
 <body class="bg-[#260d33] text-white font-bold">
     <!-- Navegación -->
     <nav class="fixed w-full top-0 z-50 bg-gradient-to-r from-[#003f69] via-[#004d7a] to-[#003f69] border-b-4 border-cyan-400 shadow-lg shadow-cyan-500/20 backdrop-blur-sm">
-        <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-6">
             <!-- Logo -->
-            <div class="flex items-center gap-3 py-4">
-                <div class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
-                    <span class="text-2xl">🚀</span>
+            <div class="flex items-center gap-2 md:gap-3 py-4">
+                <div class="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
+                    <span class="text-lg md:text-2xl">🚀</span>
                 </div>
-                <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Mi Portafolio</span>
+                <span class="text-lg md:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Portafolio</span>
             </div>
             
-            <!-- Links -->
-            <ul class="flex gap-1">
+            <!-- Links Desktop -->
+            <ul class="hidden md:flex gap-1">
                 <li><a href="#inicio" class="px-6 py-4 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-500/20 border-b-4 border-transparent hover:border-cyan-400 transition-all duration-300 block relative group">
                     <span class="relative z-10">Inicio</span>
                     <div class="absolute inset-0 bg-cyan-400/0 group-hover:bg-cyan-400/10 transition-all"></div>
@@ -41,11 +41,29 @@
                     <div class="absolute inset-0 bg-green-400/0 group-hover:bg-green-400/10 transition-all"></div>
                 </a></li>
             </ul>
+            
+            <!-- Botón menú móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-cyan-400 p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Menú móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#003f69] border-t border-cyan-400/30">
+            <ul class="flex flex-col">
+                <li><a href="#inicio" class="block px-6 py-3 hover:bg-cyan-500/20 border-l-4 border-transparent hover:border-cyan-400 transition-all">Inicio</a></li>
+                <li><a href="#sobre-mi" class="block px-6 py-3 hover:bg-purple-500/20 border-l-4 border-transparent hover:border-purple-400 transition-all">Sobre mí</a></li>
+                <li><a href="#proyectos" class="block px-6 py-3 hover:bg-pink-500/20 border-l-4 border-transparent hover:border-pink-400 transition-all">Proyectos</a></li>
+                <li><a href="#habilidades" class="block px-6 py-3 hover:bg-yellow-500/20 border-l-4 border-transparent hover:border-yellow-400 transition-all">Habilidades</a></li>
+                <li><a href="#contacto" class="block px-6 py-3 hover:bg-green-500/20 border-l-4 border-transparent hover:border-green-400 transition-all">Contacto</a></li>
+            </ul>
         </div>
     </nav>
     
     <!-- Espaciador para el nav fijo -->
-    <div class="h-20"></div>
+    <div class="h-16 md:h-20"></div>
 
     <!-- Hero Section -->
     <section id="inicio" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#260d33] via-[#1a0824] to-[#0d1b2a] px-6">
@@ -68,7 +86,7 @@
             </div>
 
             <!-- Título principal -->
-            <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 leading-tight">
                 ¡Hola! Soy 
                 <span class="relative inline-block">
                     <span class="relative z-10 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
@@ -113,7 +131,7 @@
             </div>
 
             <!-- Stats o info adicional -->
-            <div class="grid grid-cols-2 gap-8 mt-16 max-w-3xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-12 md:mt-16 max-w-3xl mx-auto">
                 <div class="p-6 bg-gradient-to-br from-cyan-500/10 to-transparent border border-cyan-400/20 rounded-lg backdrop-blur-sm hover:scale-105 transition-transform">
                     <div class="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent">1+</div>
                     <div class="text-sm text-gray-400 font-normal mt-2">Años de experiencia</div>
@@ -135,10 +153,10 @@
     </section>
 
     <!-- Sobre mí -->
-    <section id="sobre-mi" class="py-20 px-10">
+    <section id="sobre-mi" class="py-12 md:py-20 px-4 md:px-10">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl mb-12 text-center border-l-8 border-[#00d4ff] inline-block pl-4">Sobre Mí</h2>
-            <div class="grid md:grid-cols-2 gap-10 items-center">
+            <h2 class="text-3xl md:text-4xl mb-8 md:mb-12 text-center border-l-4 md:border-l-8 border-[#00d4ff] inline-block pl-3 md:pl-4">Sobre Mí</h2>
+            <div class="grid md:grid-cols-2 gap-6 md:gap-10 items-center">
                 <div class="bg-gradient-to-br from-[#003f69] to-[#002a46] p-8 rounded-lg border-l-4 border-[#00d4ff] shadow-xl">
                     <p class="text-lg mb-4 font-normal">Desarrollador apasionado por crear experiencias digitales únicas con un toque urbano y moderno.</p>
                     <p class="text-lg font-normal text-gray-300">Especializado en transformar ideas en código limpio y funcional, siempre buscando innovar y mejorar.</p>
@@ -158,10 +176,10 @@
     </section>
 
     <!-- Proyectos -->
-    <section id="proyectos" class="py-20 px-10 bg-gradient-to-b from-[#260d33] to-[#1a0824]">
+    <section id="proyectos" class="py-12 md:py-20 px-4 md:px-10 bg-gradient-to-b from-[#260d33] to-[#1a0824]">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl mb-12 text-center border-l-8 border-[#ff0080] inline-block pl-4">Proyectos</h2>
-            <div class="grid md:grid-cols-3 gap-6">
+            <h2 class="text-3xl md:text-4xl mb-8 md:mb-12 text-center border-l-4 md:border-l-8 border-[#ff0080] inline-block pl-3 md:pl-4">Proyectos</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 <!-- Proyecto 1 -->
                 <div class="group relative overflow-hidden rounded-lg bg-gradient-to-br from-[#003f69] to-[#002a46] hover:scale-105 transition-transform duration-300">
                     <div class="h-48 overflow-hidden">
@@ -226,10 +244,10 @@
     </section>
 
     <!-- Habilidades -->
-    <section id="habilidades" class="py-20 px-10">
+    <section id="habilidades" class="py-12 md:py-20 px-4 md:px-10">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl mb-12 text-center border-l-8 border-yellow-500 inline-block pl-4">Habilidades</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="text-3xl md:text-4xl mb-8 md:mb-12 text-center border-l-4 md:border-l-8 border-yellow-500 inline-block pl-3 md:pl-4">Habilidades</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Frontend -->
                 <div class="bg-gradient-to-br from-[#003f69] to-[#002a46] p-8 rounded-lg border-t-4 border-cyan-400 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all">
                     <div class="text-5xl mb-4 text-center">⚡</div>
@@ -294,12 +312,12 @@
     </section>
 
     <!-- Contacto -->
-    <section id="contacto" class="py-20 px-10 bg-gradient-to-b from-[#1a0824] to-[#260d33]">
-        <div class="max-w-4xl mx-auto items-center">
-            <h2 class="text-4xl mb-12 text-center border-l-8 border-[#ff0080] inline-block pl-4">Conecta Conmigo</h2>
-            <p class="text-2xl mb-12 text-center font-normal text-gray-300">¡Sígueme en mis redes sociales! 🚀</p>
+    <section id="contacto" class="py-12 md:py-20 px-4 md:px-10 bg-gradient-to-b from-[#1a0824] to-[#260d33]">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl mb-8 md:mb-12 text-center border-l-4 md:border-l-8 border-[#ff0080] inline-block pl-3 md:pl-4">Conecta Conmigo</h2>
+            <p class="text-xl md:text-2xl mb-8 md:mb-12 text-center font-normal text-gray-300">¡Sígueme en mis redes sociales! 🚀</p>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 <!-- GitHub -->
                 <a href="https://github.com/Joselitomix02YT" target="_blank" 
                    class="bg-gradient-to-br from-[#003f69] to-[#002a46] p-8 rounded-lg border-t-4 border-purple-500 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 transition-all group">
@@ -354,5 +372,23 @@
         </div>
     </footer>
 
+    <script>
+        // Toggle menú móvil
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Cerrar menú al hacer click en un enlace
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+    </script>
 </body>
 </html>
